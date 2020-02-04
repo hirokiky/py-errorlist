@@ -1,3 +1,2 @@
 def foo():
-    print("Hi")
-      print("Foo")
+    foo-bar = 1
