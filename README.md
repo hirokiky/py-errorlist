@@ -5,12 +5,12 @@
 * [x] IndentationError
 * [x] NameError
 * [x] AttributeError
-* [ ] ImportError
+* [x] ImportError
+* [x] ModuleNotFoundError
 * [ ] UnicodeDecodeError
 * [ ] UnicodeEncodeError
-* [ ] ModuleNotFoundError
+* [ ] ZeroDivisionError
 * [ ] OSError
 * [ ] RecursionError
 * [ ] StopIteration
 * [ ] TabError
-* [ ] ZeroDivisionError
