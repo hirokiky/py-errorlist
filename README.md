@@ -9,8 +9,6 @@
 * [x] ModuleNotFoundError
 * [x] UnicodeDecodeError
 * [x] UnicodeEncodeError
-* [ ] ZeroDivisionError
-* [ ] OSError
-* [ ] RecursionError
-* [ ] StopIteration
-* [ ] TabError
+* [x] ZeroDivisionError
+* [x] OSError
+* [x] RecursionError
