@@ -4,7 +4,7 @@
 * [x] KeyError
 * [x] IndentationError
 * [x] NameError
-* [ ] AttributeError
+* [x] AttributeError
 * [ ] ImportError
 * [ ] UnicodeDecodeError
 * [ ] UnicodeEncodeError
