@@ -7,8 +7,8 @@
 * [x] AttributeError
 * [x] ImportError
 * [x] ModuleNotFoundError
-* [ ] UnicodeDecodeError
-* [ ] UnicodeEncodeError
+* [x] UnicodeDecodeError
+* [x] UnicodeEncodeError
 * [ ] ZeroDivisionError
 * [ ] OSError
 * [ ] RecursionError
