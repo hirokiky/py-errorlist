@@ -1,0 +1,540 @@
+ファイル,コード,実行結果
+modulenotfound/01.py,"import datetimes
+","Traceback (most recent call last):
+  File ""modulenotfound/01.py"", line 1, in <module>
+    import datetimes
+ModuleNotFoundError: No module named 'datetimes'
+"
+modulenotfound/02.py,"import requests
+","Traceback (most recent call last):
+  File ""modulenotfound/02.py"", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+"
+oserror/01.py,"open(""not_exist.txt"")
+","Traceback (most recent call last):
+  File ""oserror/01.py"", line 1, in <module>
+    open(""not_exist.txt"")
+FileNotFoundError: [Errno 2] No such file or directory: 'not_exist.txt'
+"
+unicodeencode/01.py,"""日本語"".encode(""ascii"")
+","Traceback (most recent call last):
+  File ""unicodeencode/01.py"", line 1, in <module>
+    ""日本語"".encode(""ascii"")
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-2: ordinal not in range(128)
+"
+unicodeencode/02.py,"char = ""\xa1""  # '¡'
+
+char.encode(""utf-8"")  # OK
+char.encode(""cp932"")  # ERROR
+","Traceback (most recent call last):
+  File ""unicodeencode/02.py"", line 4, in <module>
+    char.encode(""cp932"")  # ERROR
+UnicodeEncodeError: 'cp932' codec can't encode character '\xa1' in position 0: illegal multibyte sequence
+"
+keyerror/05.py,"d = {""name"": ""Hiroki""}
+
+
+del d[""birthday""]
+","Traceback (most recent call last):
+  File ""keyerror/05.py"", line 4, in <module>
+    del d[""birthday""]
+KeyError: 'birthday'
+"
+keyerror/01.py,"d = {""name"": ""Hiroki""}
+
+d[""birthday""]
+","Traceback (most recent call last):
+  File ""keyerror/01.py"", line 3, in <module>
+    d[""birthday""]
+KeyError: 'birthday'
+"
+keyerror/04.py,"d = {}
+
+d.popitem()
+","Traceback (most recent call last):
+  File ""keyerror/04.py"", line 3, in <module>
+    d.popitem()
+KeyError: 'popitem(): dictionary is empty'
+"
+keyerror/03.py,"d = {""name"": ""Hiroki""}
+
+d.pop(""birthday"")
+","Traceback (most recent call last):
+  File ""keyerror/03.py"", line 3, in <module>
+    d.pop(""birthday"")
+KeyError: 'birthday'
+"
+keyerror/02.py,"d = {""name"": ""Hiroki""}
+
+d.remove(""birthday"")
+","Traceback (most recent call last):
+  File ""keyerror/02.py"", line 3, in <module>
+    d.remove(""birthday"")
+AttributeError: 'dict' object has no attribute 'remove'
+"
+valueerror/05.py,"min([])
+","Traceback (most recent call last):
+  File ""valueerror/05.py"", line 1, in <module>
+    min([])
+ValueError: min() arg is an empty sequence
+"
+valueerror/01.py,"int(""hello"")
+","Traceback (most recent call last):
+  File ""valueerror/01.py"", line 1, in <module>
+    int(""hello"")
+ValueError: invalid literal for int() with base 10: 'hello'
+"
+valueerror/11.py,"l = [0, 1, 2, 3]
+l.remove(100)
+","Traceback (most recent call last):
+  File ""valueerror/11.py"", line 2, in <module>
+    l.remove(100)
+ValueError: list.remove(x): x not in list
+"
+valueerror/10.py,"import random
+
+
+random.sample([0, 1, 2, 3], 100)
+","Traceback (most recent call last):
+  File ""valueerror/10.py"", line 4, in <module>
+    random.sample([0, 1, 2, 3], 100)
+  File ""/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/random.py"", line 363, in sample
+    raise ValueError(""Sample larger than population or is negative"")
+ValueError: Sample larger than population or is negative
+"
+valueerror/04.py,"max([])
+","Traceback (most recent call last):
+  File ""valueerror/04.py"", line 1, in <module>
+    max([])
+ValueError: max() arg is an empty sequence
+"
+valueerror/09.py,"import math
+
+
+math.perm(100, -2)
+","Traceback (most recent call last):
+  File ""valueerror/09.py"", line 4, in <module>
+    math.perm(100, -2)
+ValueError: k must be a non-negative integer
+"
+valueerror/08.py,"import math
+
+
+math.factorial(-1)
+","Traceback (most recent call last):
+  File ""valueerror/08.py"", line 4, in <module>
+    math.factorial(-1)
+ValueError: factorial() not defined for negative values
+"
+valueerror/03.py,"import math
+
+
+math.sqrt(-1)
+","Traceback (most recent call last):
+  File ""valueerror/03.py"", line 4, in <module>
+    math.sqrt(-1)
+ValueError: math domain error
+"
+valueerror/13.py,"f = open(""./README.md"")
+f.close()
+f.read()
+","Traceback (most recent call last):
+  File ""valueerror/13.py"", line 3, in <module>
+    f.read()
+ValueError: I/O operation on closed file.
+"
+valueerror/07.py,"import math
+
+
+math.comb(100, -2)
+","Traceback (most recent call last):
+  File ""valueerror/07.py"", line 4, in <module>
+    math.comb(100, -2)
+ValueError: k must be a non-negative integer
+"
+valueerror/06.py,"import json
+
+
+nan = float(""NaN"")
+json.dumps(nan, allow_nan=False)
+","Traceback (most recent call last):
+  File ""valueerror/06.py"", line 5, in <module>
+    json.dumps(nan, allow_nan=False)
+  File ""/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/__init__.py"", line 234, in dumps
+    return cls(
+  File ""/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py"", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File ""/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/encoder.py"", line 257, in iterencode
+    return _iterencode(o, 0)
+ValueError: Out of range float values are not JSON compliant
+"
+valueerror/02.py,"from datetime import date
+
+
+date(2020, 1, 40)
+","Traceback (most recent call last):
+  File ""valueerror/02.py"", line 4, in <module>
+    date(2020, 1, 40)
+ValueError: day is out of range for month
+"
+valueerror/12.py,"l = [0, 1, 2, 3]
+l.index(100)
+","Traceback (most recent call last):
+  File ""valueerror/12.py"", line 2, in <module>
+    l.index(100)
+ValueError: 100 is not in list
+"
+attributeerror/01.py,"a = ""Hello-GoodBye""
+
+a.splt(""-"")
+","Traceback (most recent call last):
+  File ""attributeerror/01.py"", line 3, in <module>
+    a.splt(""-"")
+AttributeError: 'str' object has no attribute 'splt'
+"
+attributeerror/02.py,"import re
+
+
+text = ""Hello""
+
+m = re.match(r""WONT MATCH"", text)
+m.group(0)
+","Traceback (most recent call last):
+  File ""attributeerror/02.py"", line 7, in <module>
+    m.group(0)
+AttributeError: 'NoneType' object has no attribute 'group'
+"
+zerodiv/01.py,"1 / 0
+","Traceback (most recent call last):
+  File ""zerodiv/01.py"", line 1, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
+"
+zerodiv/02.py,"def avg(iterable):
+    return sum(iterable) / len(iterable)
+
+
+avg([0, 1, 2, 3])  # OK
+avg([])  # NG
+","Traceback (most recent call last):
+  File ""zerodiv/02.py"", line 6, in <module>
+    avg([])  # NG
+  File ""zerodiv/02.py"", line 2, in avg
+    return sum(iterable) / len(iterable)
+ZeroDivisionError: division by zero
+"
+recursion/01.py,"def foo():
+    foo()
+
+foo()
+","Traceback (most recent call last):
+  File ""recursion/01.py"", line 4, in <module>
+    foo()
+  File ""recursion/01.py"", line 2, in foo
+    foo()
+  File ""recursion/01.py"", line 2, in foo
+    foo()
+  File ""recursion/01.py"", line 2, in foo
+    foo()
+  [Previous line repeated 996 more times]
+RecursionError: maximum recursion depth exceeded
+"
+importerror/01.py,"from datetime import datetimes
+","Traceback (most recent call last):
+  File ""importerror/01.py"", line 1, in <module>
+    from datetime import datetimes
+ImportError: cannot import name 'datetimes' from 'datetime' (/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/datetime.py)
+"
+nameerror/01.py,"print(a)
+","Traceback (most recent call last):
+  File ""nameerror/01.py"", line 1, in <module>
+    print(a)
+NameError: name 'a' is not defined
+"
+nameerror/04.py,"re.compile(""FOOBAR"")
+","Traceback (most recent call last):
+  File ""nameerror/04.py"", line 1, in <module>
+    re.compile(""FOOBAR"")
+NameError: name 're' is not defined
+"
+nameerror/03.py,"class A:
+    def foo(name):
+        self.bar
+
+
+a = A()
+a.foo()
+","Traceback (most recent call last):
+  File ""nameerror/03.py"", line 7, in <module>
+    a.foo()
+  File ""nameerror/03.py"", line 3, in foo
+    self.bar
+NameError: name 'self' is not defined
+"
+nameerror/02.py,"del a
+","Traceback (most recent call last):
+  File ""nameerror/02.py"", line 1, in <module>
+    del a
+NameError: name 'a' is not defined
+"
+unicodedecode/01.py,"b = ""日本語"".encode(""utf-8"")
+b.decode(""cp932"")
+","Traceback (most recent call last):
+  File ""unicodedecode/01.py"", line 2, in <module>
+    b.decode(""cp932"")
+UnicodeDecodeError: 'cp932' codec can't decode byte 0x9e in position 8: incomplete multibyte sequence
+"
+unicodedecode/02.py,"import os
+
+
+HERE = os.path.dirname(__file__)
+p = os.path.join(HERE, ""utf8.txt"")
+
+with open(p, encoding=""cp932"") as f:
+    f.read()
+","Traceback (most recent call last):
+  File ""unicodedecode/02.py"", line 8, in <module>
+    f.read()
+UnicodeDecodeError: 'cp932' codec can't decode byte 0x9e in position 8: illegal multibyte sequence
+"
+typeerror/05.py,"""You are No "" + 1
+","Traceback (most recent call last):
+  File ""typeerror/05.py"", line 1, in <module>
+    ""You are No "" + 1
+TypeError: can only concatenate str (not ""int"") to str
+"
+typeerror/15.py,"import json
+
+
+json.loads(100)
+","Traceback (most recent call last):
+  File ""typeerror/15.py"", line 4, in <module>
+    json.loads(100)
+  File ""/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/json/__init__.py"", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not int
+"
+typeerror/01.py,"int([0, 1, 2])
+","Traceback (most recent call last):
+  File ""typeerror/01.py"", line 1, in <module>
+    int([0, 1, 2])
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+"
+typeerror/11.py,"users = {""hiroki"", ""michael""}
+
+groups = {
+    users: ""founder"",
+}
+","Traceback (most recent call last):
+  File ""typeerror/11.py"", line 3, in <module>
+    groups = {
+TypeError: unhashable type: 'set'
+"
+typeerror/10.py,"c = [36, 138]
+
+d = {
+    c: ""Japan"",
+}
+","Traceback (most recent call last):
+  File ""typeerror/10.py"", line 3, in <module>
+    d = {
+TypeError: unhashable type: 'list'
+"
+typeerror/04.py,"""1. Hi, 1. Hello, 1. Bye"".split(1)
+","Traceback (most recent call last):
+  File ""typeerror/04.py"", line 1, in <module>
+    ""1. Hi, 1. Hello, 1. Bye"".split(1)
+TypeError: must be str or None, not int
+"
+typeerror/14.py,"owners = [""hiroki"", ""michael""]
+customers = (""ken"", ""takkyu"")
+
+owners + customers
+","Traceback (most recent call last):
+  File ""typeerror/14.py"", line 4, in <module>
+    owners + customers
+TypeError: can only concatenate list (not ""tuple"") to list
+"
+typeerror/09.py,"class A:
+    def print_name(name):
+        print(name)
+
+
+a = A()
+a.print_name(""James"")
+","Traceback (most recent call last):
+  File ""typeerror/09.py"", line 7, in <module>
+    a.print_name(""James"")
+TypeError: print_name() takes 1 positional argument but 2 were given
+"
+typeerror/08.py,"l = [0, 1, 2]
+
+l()
+","Traceback (most recent call last):
+  File ""typeerror/08.py"", line 3, in <module>
+    l()
+TypeError: 'list' object is not callable
+"
+typeerror/03.py,"l = 1
+
+for x in l:
+    print(x)
+","Traceback (most recent call last):
+  File ""typeerror/03.py"", line 3, in <module>
+    for x in l:
+TypeError: 'int' object is not iterable
+"
+typeerror/13.py,"a = 1,
+b = 2
+
+a + b
+","Traceback (most recent call last):
+  File ""typeerror/13.py"", line 4, in <module>
+    a + b
+TypeError: can only concatenate tuple (not ""int"") to tuple
+"
+typeerror/07.py,"""12 years old"" - 1
+","Traceback (most recent call last):
+  File ""typeerror/07.py"", line 1, in <module>
+    ""12 years old"" - 1
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+"
+typeerror/17.py,"range(0, 100, 0)
+","Traceback (most recent call last):
+  File ""typeerror/17.py"", line 1, in <module>
+    range(0, 100, 0)
+ValueError: range() arg 3 must not be zero
+"
+typeerror/06.py,"""Hi"" / 3
+","Traceback (most recent call last):
+  File ""typeerror/06.py"", line 1, in <module>
+    ""Hi"" / 3
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+"
+typeerror/16.py,"256 << -1
+","Traceback (most recent call last):
+  File ""typeerror/16.py"", line 1, in <module>
+    256 << -1
+ValueError: negative shift count
+"
+typeerror/02.py,"max(1)
+","Traceback (most recent call last):
+  File ""typeerror/02.py"", line 1, in <module>
+    max(1)
+TypeError: 'int' object is not iterable
+"
+typeerror/12.py,"prices = {
+    ""コーラ"": 100,
+    ""お茶"": 80,
+}
+
+stores = {
+    prices: ""さいたま支店"",
+}
+","Traceback (most recent call last):
+  File ""typeerror/12.py"", line 6, in <module>
+    stores = {
+TypeError: unhashable type: 'dict'
+"
+syntax/syntax01.py,"def foo():
+    foo-bar = 1
+","  File ""syntax/syntax01.py"", line 2
+    foo-bar = 1
+    ^
+SyntaxError: cannot assign to operator
+"
+syntax/syntax11.py,"f""{}""
+","  File ""syntax/syntax11.py"", line 1
+    f""{}""
+    ^
+SyntaxError: f-string: empty expression not allowed
+"
+syntax/15.py,"None = ""Hi""
+","  File ""syntax/15.py"", line 1
+    None = ""Hi""
+    ^
+SyntaxError: cannot assign to None
+"
+syntax/syntax05.py,"del ""Hi""
+","  File ""syntax/syntax05.py"", line 1
+    del ""Hi""
+        ^
+SyntaxError: cannot delete literal
+"
+syntax/syntax04.py,"print ""Hello""
+","  File ""syntax/syntax04.py"", line 1
+    print ""Hello""
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(""Hello"")?
+"
+syntax/syntax14.py,"print(end="""", end="""")
+","  File ""syntax/syntax14.py"", line 1
+    print(end="""", end="""")
+                  ^
+SyntaxError: keyword argument repeated
+"
+syntax/syntax10.py,"f""{hello""
+","  File ""syntax/syntax10.py"", line 1
+    f""{hello""
+    ^
+SyntaxError: f-string: expecting '}'
+"
+syntax/syntax09.py,"if True:
+    continue
+","  File ""syntax/syntax09.py"", line 2
+    continue
+    ^
+SyntaxError: 'continue' not properly in loop
+"
+syntax/syntax08.py,"if True:
+    break
+","  File ""syntax/syntax08.py"", line 2
+    break
+    ^
+SyntaxError: 'break' outside loop
+"
+syntax/syntax07.py,"len(""Hi"") = 2
+","  File ""syntax/syntax07.py"", line 1
+    len(""Hi"") = 2
+    ^
+SyntaxError: cannot assign to function call
+"
+syntax/syntax03.py,"print(""Hi)
+","  File ""syntax/syntax03.py"", line 1
+    print(""Hi)
+             ^
+SyntaxError: EOL while scanning string literal
+"
+syntax/syntax13.py,"enumerate(start=1, [0, 1, 2])
+","  File ""syntax/syntax13.py"", line 1
+    enumerate(start=1, [0, 1, 2])
+                       ^
+SyntaxError: positional argument follows keyword argument
+"
+syntax/syntax02.py,"de test():
+    print(""Fabor"")
+","  File ""syntax/syntax02.py"", line 1
+    de test():
+       ^
+SyntaxError: invalid syntax
+"
+syntax/syntax12.py,"f""{foo[']}""
+","  File ""syntax/syntax12.py"", line 1
+    f""{foo[']}""
+    ^
+SyntaxError: f-string: unterminated string
+"
+syntax/syntax06.py,"""Hello"" = 1
+","  File ""syntax/syntax06.py"", line 1
+    ""Hello"" = 1
+    ^
+SyntaxError: cannot assign to literal
+"
+indentationerror/01.py,"if True:
+print(""Hi"")
+","  File ""indentationerror/01.py"", line 2
+    print(""Hi"")
+    ^
+IndentationError: expected an indented block
+"
