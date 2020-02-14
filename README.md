@@ -3,7 +3,7 @@
 * [x] ValueError
 * [x] KeyError
 * [x] IndentationError
-* [ ] NameError
+* [x] NameError
 * [ ] AttributeError
 * [ ] ImportError
 * [ ] UnicodeDecodeError
