@@ -11,5 +11,5 @@ for path in sorted(glob.glob("*/*.py")):
         print(f.read())
 
     print("result\n------")
-    subprocess.run(["python3.7", path])
+    subprocess.run(["python", path])
     print("")
