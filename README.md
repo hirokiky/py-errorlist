@@ -1,6 +1,7 @@
 * [x] SyntaxError
 * [x] TypeError
 * [ ] ValueError
+* [ ] KeyError
 * [ ] IndetationError
 * [ ] NameError
 * [ ] AttributeError
