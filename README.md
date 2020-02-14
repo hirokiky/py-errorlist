@@ -2,7 +2,7 @@
 * [x] TypeError
 * [x] ValueError
 * [x] KeyError
-* [ ] IndetationError
+* [x] IndentationError
 * [ ] NameError
 * [ ] AttributeError
 * [ ] ImportError
